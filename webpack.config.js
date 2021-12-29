@@ -59,12 +59,12 @@ const plugins = () => {
       filename: `./styles/${filename("css")}`
     }),
     // new CopyPlugin({
-    //   // patterns: [
-    //   //   {
-    //   //     from: path.resolve(__dirname, 'src/assets'),
-    //   //     to: path.resolve(__dirname, 'dist')
-    //   //   },
-    //   // ]
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src/assets'),
+    //       to: path.resolve(__dirname, 'dist')
+    //     },
+    //   ]
     // }),
   ]
 
@@ -111,9 +111,31 @@ module.exports = {
       {
         test: /\.s?css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: "css-loader",
+            options: { importLoaders: 1 },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "autoprefixer",
+                    {
+                      // Options
+                    },
+                  ],
+                ]
+              }
+            }
+          },
+          {
+            loader: "sass-loader",
+          }
         ]
       },
       {
