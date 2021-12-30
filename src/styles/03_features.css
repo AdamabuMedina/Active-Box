@@ -25,3 +25,20 @@
   line-height: 1.5;
   font-size: 14px;
 }
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 991px) {
+  .features__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 567px) {
+  .features__item {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
