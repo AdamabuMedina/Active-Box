@@ -5,6 +5,7 @@
 
 .reviews__item {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .reviews__photo {
@@ -44,4 +45,24 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
+}
+
+@media (max-width: 991px) {
+  .reviews__photo {
+    margin: 15px 0 40px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .reviews__content {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews__text {
+    font-size: 25px;
+  }
 }
