@@ -35,6 +35,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .features {
+    margin: 40px 0;
+  }
+}
+
 @media (max-width: 567px) {
   .features__item {
     width: 100%;
