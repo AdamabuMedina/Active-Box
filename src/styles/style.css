@@ -28,11 +28,13 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 @import '01_header.css';
 @import '02_intro.css';
 @import '03_features.css';
 @import '04_works.css';
+@import '05_team.css';
