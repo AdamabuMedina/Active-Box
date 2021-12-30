@@ -1,3 +1,7 @@
 import "../styles/style.css"
+const fixedHeader = require("./functions/scroll")
 
-console.log("Post to String");
+$(function () {
+  // Фиксированный скролл
+  fixedHeader()
+})
