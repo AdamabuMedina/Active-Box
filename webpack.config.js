@@ -27,18 +27,24 @@ const optimization = () => {
       new TerserPlugin(),
       new ImageMinimizerPlugin({
         minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              "imagemin-gifsicle",
-              "imagemin-jpegtran",
-              "imagemin-optipng",
-              "imagemin-svgo",
-            ],
-          },
+          implementation: ImageMinimizerPlugin.squooshMinify,
+          // options: {
+          //   encodeOptions: {
+          //     mozjpeg: {
+          //       // That setting might be close to lossless, but it’s not guaranteed
+          //       // https://github.com/GoogleChromeLabs/squoosh/issues/85
+          //       quality: 100,
+          //     },
+          //     webp: {
+          //       lossless: 1,
+          //     },
+          //     avif: {
+          //       // https://github.com/GoogleChromeLabs/squoosh/blob/dev/codecs/avif/enc/README.md
+          //       cqLevel: 0,
+          //     },
+          //   },
+          // },
         },
-        // Disable `loader`
-        loader: false,
       }),
     ]
   }
@@ -133,14 +139,14 @@ module.exports = {
               }
             }
           },
-          {
-            loader: "sass-loader",
-          }
+          // {
+          //   loader: "sass-loader",
+          // }
         ]
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: 'asset',
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
