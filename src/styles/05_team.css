@@ -47,6 +47,7 @@
 }
 
 .social__item {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -67,11 +68,36 @@
 }
 
 .social__icon {
-  padding-top: 10px;
   display: block;
-  width: 40px;
   height: 18px;
+
   fill: #c6cacc;
 
-  transition: fill 0.2s linear;
+  transition: fill 0.1s linear;
+}
+
+@media (max-width: 991px) {
+  .team__photo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team__item {
+    width: 50%;
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .team {
+    margin: 60px 0 30px;
+  }
+
+  .team__item {
+    width: 100%;
+  }
 }
