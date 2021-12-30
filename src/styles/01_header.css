@@ -39,3 +39,12 @@
 .nav__link:hover {
   opacity: 1;
 }
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+}
