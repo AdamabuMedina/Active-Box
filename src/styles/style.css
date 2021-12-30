@@ -68,10 +68,10 @@ a {
   min-width: 280px;
 }
 
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 991px) {
+@media (max-width: 767px) {
+  .btn--long {
+    min-width: 260px;
+  }
 }
 
 @import '01_header.css';
