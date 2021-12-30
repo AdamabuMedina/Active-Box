@@ -47,15 +47,31 @@
 }
 
 .social__item {
-  width: 40px;
-  height: 40px;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
   border: 1px solid #e8ecee;
+  background-color: #fff;
   margin-right: 4px;
+
+  transition: background 0.2s linear;
 }
 
-.social__item img {
+.social__item:hover {
+  background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+  fill: #000;
+}
+
+.social__icon {
+  padding-top: 10px;
+  display: block;
+  width: 40px;
   height: 18px;
-  color: #e8ecee;
+  fill: #c6cacc;
+
+  transition: fill 0.2s linear;
 }
