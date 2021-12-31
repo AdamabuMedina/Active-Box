@@ -61,6 +61,7 @@ const plugins = () => {
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
+      favicon: path.resolve(__dirname, "src/assets/favicon.ico"),
       minify: {
         collapseWhitespace: isProd
       }
@@ -73,7 +74,7 @@ const plugins = () => {
     //   patterns: [
     //     {
     //       from: path.resolve(__dirname, 'src/assets'),
-    //       to: path.resolve(__dirname, 'dist')
+    //       to: path.resolve(__dirname, 'dist/assets')
     //     },
     //   ]
     // }),
